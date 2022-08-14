@@ -60,7 +60,9 @@ main {
       color: white;
       align-items: center;
       justify-content: space-between;
-      position: relative;
+      position: fixed;
+      z-index: 99;
+
       .brand h1 {
         font-family: "Lobster", cursive;
       }
@@ -68,11 +70,12 @@ main {
         position: absolute;
         top: 100%;
         padding: 0 10px;
+        transition: 850ms;
         background: rgba(0, 0, 0, 0.7);
         min-height: 100vh;
         left: 0;
-        width: 40%;
-        display: none;
+        width: 50%;
+        display: flex;
         justify-content: center;
         align-items: stretch;
         flex-direction: column;
@@ -97,6 +100,9 @@ main {
       }
       .lingking[data-show="false"] {
         left: -100%;
+      }
+      .lingking[data-show="true"] {
+        left: 0;
       }
       button {
         background: transparent;
