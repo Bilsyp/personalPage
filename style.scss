@@ -241,10 +241,140 @@ footer {
   // margin-top: 1.2em;
 }
 @media (min-width: 600px) {
-  main {
-    display: none;
-  }
-  footer {
-    display: none;
+  section {
+    padding: 14rem 2em;
+    // margin: 1em 0;
+
+    position: relative;
+    .wave {
+      position: absolute;
+      height: 250px;
+      // overflow: hidden;
+
+      left: 0;
+      width: 100%;
+      .bubble {
+        position: relative;
+        border-radius: 50%;
+        z-index: 99;
+        animation: animate 12s ease-in-out infinite;
+        width: 300px;
+        height: 300px;
+
+        margin: auto;
+        transform: translateX(-50%);
+        box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.5);
+
+        span {
+          position: absolute;
+          border-radius: 50%;
+        }
+        span:nth-child(1) {
+          inset: 10px;
+          border-left: 15px solid #93ddff;
+          filter: blur(8px);
+        }
+        span:nth-child(2) {
+          inset: 10px;
+          border-right: 15px solid #93ddff;
+          filter: blur(8px);
+        }
+        span:nth-child(3) {
+          inset: 10px;
+          border-top: 20px solid #e5ff00;
+          filter: blur(8px);
+        }
+        span:nth-child(4) {
+          inset: 10px;
+          border-bottom: 15px solid #feffff;
+          filter: blur(8px);
+        }
+        span:nth-child(5) {
+          inset: 30px;
+          border-left: 15px solid #ff4484;
+          filter: blur(12px);
+        }
+        span:nth-child(6) {
+          inset: 30px;
+          border-right: 15px solid #ff4484;
+          filter: blur(12px);
+        }
+        // background: red;
+      }
+      .bubble:nth-child(1) {
+        top: 40%;
+      }
+      .bubble:nth-child(2) {
+        position: relative;
+        animation-delay: 0.7s;
+        zoom: 0.34;
+      }
+      .bubble:nth-child(3) {
+        position: relative;
+        zoom: 0.2;
+        top: -80%;
+        left: -100px;
+        z-index: 99;
+        // transform: translateY(-800px);
+      }
+      .bubble:nth-child(4) {
+        position: relative;
+        zoom: 0.25;
+        animation-delay: 0.8s;
+        top: -80%;
+        left: 250px;
+
+        // transform: translateY(-800px);
+      }
+      @keyframes animate {
+        0%,
+        100% {
+          // top: 20%;
+          transform: translateY(-20px);
+        }
+        50% {
+          // top: 50%;
+          transform: translateY(40px);
+        }
+      }
+      .bubble::before {
+        content: "";
+        position: absolute;
+        top: 70px;
+        z-index: 10;
+        filter: blur(2px);
+        left: 80px;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+      .bubble::after {
+        content: "";
+        position: absolute;
+        top: 100px;
+        z-index: 10;
+        filter: blur(2px);
+        left: 120px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        // zoom: 0.9;
+        // border: 1px solid black;
+      }
+    }
+    .wave1 {
+      background: url("../images/wave1.svg") center center/cover;
+      top: 0;
+    }
+    .wave2 {
+      background: url("../images/wave2.svg") center center/cover;
+      bottom: 0;
+    }
+    // overflow: hidden;
+    h2 {
+      text-align: center;
+    }
   }
 }
