@@ -21,7 +21,7 @@ p {
   padding: 20px 0;
 }
 section {
-  padding: 5rem 2em;
+  // padding: 5rem 2em;
   margin: 1em 0;
 
   position: relative;
@@ -30,6 +30,7 @@ section {
     text-align: center;
   }
   .wave {
+    width: 100%;
     position: absolute;
     left: 0;
   }
@@ -41,6 +42,8 @@ section {
   }
 }
 main {
+  // background: red;
+  width: 100%;
   //   padding: 20p;
   header {
     nav {
@@ -48,6 +51,7 @@ main {
       height: 80px;
       background: #0099ff;
       padding: 10px 20px;
+      width: 100%;
       display: flex;
       color: white;
       align-items: center;
@@ -64,7 +68,7 @@ main {
         min-height: 100vh;
         left: 0;
         width: 40%;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: stretch;
         flex-direction: column;
