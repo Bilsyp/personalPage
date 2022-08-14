@@ -22,23 +22,27 @@ p {
 }
 section {
   padding: 5rem 2em;
-  margin: 1em 0;
+  // margin: 1em 0;
 
   position: relative;
+  .wave {
+    position: absolute;
+    height: 100px;
+    left: 0;
+    width: 100%;
+    // border: 1px solid black;
+  }
+  .wave1 {
+    background: url("../images/wave1.svg") center center/cover;
+    top: 0;
+  }
+  .wave2 {
+    background: url("../images/wave2.svg") center center/cover;
+    bottom: 0;
+  }
   // overflow: hidden;
   h2 {
     text-align: center;
-  }
-  .wave {
-    width: 100%;
-    position: absolute;
-    left: 0;
-  }
-  .wave:nth-child(1) {
-    top: 0;
-  }
-  .wave:nth-child(2) {
-    bottom: 0;
   }
 }
 main {
@@ -122,6 +126,10 @@ main {
   }
   .About {
     background: #fff;
+
+    .About-content {
+      margin-top: 5em;
+    }
     .row {
       margin: 5em 0;
     }
@@ -224,5 +232,13 @@ main {
 }
 footer {
   background: #0099ff;
-  margin-top: 1.2em;
+  // margin-top: 1.2em;
+}
+@media (min-width: 600px) {
+  main {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
 }
