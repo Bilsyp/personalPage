@@ -150,6 +150,11 @@ main {
         article {
           display: none;
         }
+        .card-content {
+          img {
+            width: 200px;
+          }
+        }
       }
     }
   }
